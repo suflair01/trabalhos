@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.0.2/chart.min.js"
+      integrity="sha512-dnUg2JxjlVoXHVdSMWDYm2Y5xcIrJg1N+juOuRi0yLVkku/g26rwHwysJDAMwahaDfRpr1AxFz43ktuMPr/l1A=="
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div style="width: 70%; height: 200px">
+      <canvas id="chart"></canvas>
+    </div>
+  </body>
+</html>
+<script>
+  
+  var ctx = chart.getContext("2d");
+
+  
+  var config = {
+    type: "line", 
+    data: {
+      labels: ["mes 1", "mes 2", "mes 3", "mes 4", "mes 5"], 
+      datasets: [
+        {
+          label: "rua 1", 
+          data: [15, 17, 20, 6, 15], 
+          backgroundColor: [
+            "rgba(49, 37, 288, 0.2)",
+          ],
+          
+          borderColor: [
+            "rgba(1 ,1, 1, 1)",
+          ],
+          borderWidth: 3,
+
+        },
+
+        {
+          label: "rua 2", 
+          data: [1, 5, 4, 6,7], 
+          backgroundColor: [
+            "rgba(23,222,33)",
+          ],
+          
+          borderColor: [
+            "rgba(23,180,33)",
+          ],
+          borderWidth: 3,
+
+        },
+
+
+        {
+          label: "rua 3", 
+          data: [5, 12, 0, 20,7], 
+          backgroundColor: [
+            "rgba(23,67,33)",
+          ],
+          
+          borderColor: [
+            "rgba(233,18,33)",
+          ],
+          borderWidth: 3,
+
+        },
+
+      ],
+
+        
+
+    },
+    options: {
+      responsive: true,
+      scales: {
+        
+        y: {
+          beginAtZero: true,
+        },
+      },
+    },
+  };
+
+  new Chart(ctx, config); 
+</script>
